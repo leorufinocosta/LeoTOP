@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bem vindo</title>
+</head>
+<body>
+    <h1>Bem Vindo {{nome}}</h1>
+
+    <table border="1">
+        <tr>
+            <td>Disciplina</td>
+            <td>Nota 1</td>
+            <td>Nota 2</td>
+            <td>Nota 3</td>
+        </tr>
+        {% for disciplina in disciplinas %}
+            <tr>
+                <td><a href="/detalhar/{{disciplina[0]}}">{{disciplina[0]}}</a></td>
+                <td>{{disciplina[1]}}</td>
+                <td>{{disciplina[2]}}</td>
+                <td>{{disciplina[3]}}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
